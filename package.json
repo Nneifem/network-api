@@ -1,0 +1,19 @@
+{
+  "name": "network-api",
+  "version": "1.0.0",
+  "description": "Make friends and interact with their posts!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "index.js": "^0.0.3",
+    "mongoose": "^7.4.1",
+    "nodemon": "^3.0.1",
+    "server.js": "^1.0.0"
+  }
+}
