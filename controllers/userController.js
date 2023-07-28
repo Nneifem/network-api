@@ -5,7 +5,7 @@ module.exports = {
     async getUsers(req, res) {
         try {
             const users = await User.find();
-            res.status(users);
+            res.json(users);
         } catch (err) {
             res.status(500).json(err);
         }
@@ -77,7 +77,7 @@ module.exports = {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $addToSet: { friends: req.body } },
+                { $addToSet: { friends: req.params.friendId} },
                 { runValidators: true, new: true }
             );
             if (!user) {
@@ -97,7 +97,7 @@ module.exports = {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
-                { $pull: { reaction: { reactionId: req.params.friendId } } },
+                { $pull: { friends: req.params.friendId } },
                 { runValidators: true, new: true }
             );
             if (!user) {
