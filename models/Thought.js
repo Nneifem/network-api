@@ -12,8 +12,7 @@ const thoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            //getter to formart timestamp on query
-            get: (createdAt) => createdAt.format('MM-DD-YYYY'),
+            get: formatDate
         },
         username: {
             type: String,
@@ -25,6 +24,7 @@ const thoughtSchema = new Schema(
         toJSON: {
             virutals: true,
             getters: true,
+            timestamps: true,
         },
     }
 );
@@ -32,6 +32,10 @@ const thoughtSchema = new Schema(
 thoughtSchema.virtual("reactionCount").get(function(){
     return this.reactions.length
 });
+
+function formatDate(createdAt) {
+    return createdAt;
+};
 
 const Thought = model('thought', thoughtSchema);
 

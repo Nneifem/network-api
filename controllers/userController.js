@@ -46,7 +46,7 @@ module.exports = {
                 { runValidators: true, new: true }
             );
 
-            if (!course) {
+            if (!user) {
                 res.status(404).json({ message: 'No user with this id!' });
             }
 
@@ -73,7 +73,7 @@ module.exports = {
     },
 
     // create friend list
-    async addFreind(req, res) {
+    async addFriend(req, res) {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
@@ -93,7 +93,7 @@ module.exports = {
     }, 
 
     // remove friend from list
-    async removeFreind(req, res) {
+    async removeFriend(req, res) {
         try {
             const user = await User.findOneAndUpdate(
                 { _id: req.params.userId },
