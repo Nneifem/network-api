@@ -10,6 +10,7 @@ To get the code to work properly, you will need to do the following steps in the
 - npm init -y
 - npm i express
 - npm i mongoose
+
 Afterwards you can type node index.js to get the code to start running.
 
 ## Usage
