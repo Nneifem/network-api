@@ -17,7 +17,7 @@ Afterwards you can type node index.js to get the code to start running.
 
 As shown in the demo video, you are able to create, update, or delete users and thoughts. You can also make a friend list where you add or remove users from that list and be able to react to other user's thought and delete it if needed.
 
-Demo video: https://drive.google.com/file/d/1m5NOJEJbiFdaWI9oLywsbUu2gmp-y6Gy/view?usp=sharing
+Demo video: https://drive.google.com/file/d/1sRVfcBYoFoGDZnpTldFoWvLMEB_7F9mq/view?usp=sharing
 
 ## License
 
