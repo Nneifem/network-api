@@ -18,20 +18,14 @@ const reactionSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: formatDate
         }
     },
     {
         toJSON: {
             getters: true,
-            timestamps: true,
         },
         id: false,
     }
 );
-
-function formatDate(createdAt) {
-    return createdAt;
-};
 
 module.exports = reactionSchema;
